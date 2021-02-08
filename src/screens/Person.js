@@ -1,7 +1,8 @@
 import React from 'react';
 import { SafeAreaView, Text } from 'react-native';
 
-const Person = () => {
+const Person = ({ route }) => {
+  const { user } = route.params;
   return (
     <SafeAreaView>
       <Text>{"Person"}</Text>
