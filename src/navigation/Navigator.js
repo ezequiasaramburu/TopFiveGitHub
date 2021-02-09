@@ -12,7 +12,9 @@ export default function AppNavigator() {
   return (
     <>
       <NavigationContainer>
-        <Stack.Navigator>
+        <Stack.Navigator
+          screenOptions={{headerTitleAlign: 'center'}}
+        >
           <Stack.Screen
             name="Home"
             component={Home}
@@ -27,7 +29,8 @@ export default function AppNavigator() {
             options={{
               headerStyle: styles.header,
               headerTitleStyle: styles.headerTitle,
-              headerTintColor: colors.white
+              headerTintColor: colors.white,
+              headerBackTitle: 'Back'
             }}
           />
         </Stack.Navigator>
@@ -43,6 +46,5 @@ const styles = new StyleSheet.create({
   },
   headerTitle: {
     color: colors.white,
-    alignSelf: 'center'
   }
 });

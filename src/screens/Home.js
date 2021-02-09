@@ -12,6 +12,7 @@ import { Octokit } from "@octokit/core"
 import { apiConfig } from '../config/config';
 import { usersNames } from '../utils/const';
 import colors from '../style/color';
+import AppStyles from '../style/AppStyles';
 
 const octokit = new Octokit({ auth: apiConfig.gitHubToken });
 
@@ -37,10 +38,10 @@ const Home = () => {
   }, []);
 
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView style={AppStyles.container}>
       {loading
         ? <Text>{'Loading'}</Text>
-        : <View style={styles.content}>
+        : <View style={AppStyles.content}>
             <Text style={styles.title}>{'Top 5 GitHub users'}</Text>
             <Text style={styles.subTitle}>{'Tap the username to see more information'}</Text>
             <FlatList
@@ -82,9 +83,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     flex: 1,
     width: '100%',
-  },
-  content: {
-    width: '90%',
   },
   flatList: {
     flexWrap: 'wrap',

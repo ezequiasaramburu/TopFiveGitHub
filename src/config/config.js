@@ -1,5 +1,5 @@
 // TODO: use env vars
 export const apiConfig = {
   baseUrl: 'https://api.github.com',
-  gitHubToken: '9536c6b74bd4c3535e34eca345171dac8d375b6d'
+  gitHubToken: 'a1e97f0ec9ad13cc022094127ecea7e156c737b7'
 };
